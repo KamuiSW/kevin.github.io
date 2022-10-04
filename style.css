@@ -63,6 +63,12 @@ h1 {
     top: 200px;
     font-smooth: never;
     -webkit-font-smoothing : none;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 h2 {
