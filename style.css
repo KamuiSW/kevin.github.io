@@ -102,7 +102,6 @@ p {
 
     position:relative;
 
-    top: 1050px;
     color:rgb(0, 204, 255);
     position: relative;
     text-justify: center;
@@ -120,11 +119,7 @@ img {
     margin-left: auto;
     margin-right: auto;
     position:relative;
-    top:1000px;
-    
-    
 
-    
 }
 
 video {
