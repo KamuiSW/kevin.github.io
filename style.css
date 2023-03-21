@@ -80,6 +80,10 @@ h2 {
     -webkit-text-stroke: 1px black; /* width and color */
 }
 
+h5{
+    border: 5px solid #555;
+}
+
 h3 {
     color:rgb(0, 204, 255);
     position: relative;
@@ -160,7 +164,7 @@ p3{
 }
 
 img {
-    border: 5px solid #555;
+    
 }
 
 
@@ -258,3 +262,11 @@ img {
     background-color: black;
   }
 
+  .row {
+    display: flex;
+  }
+  
+  .column {
+    flex: 33.33%;
+    padding: 5px;
+  }
