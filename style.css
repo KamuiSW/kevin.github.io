@@ -1,16 +1,16 @@
 
 
 p3 {
-    color:rgb(0, 204, 255);
+    color:rgb(0, 0, 0);
     position: relative;
     text-justify: center;
     text-align: center;
     top: 160px;
     -webkit-text-stroke: 1px black; /* width and color */
     background-color: rgba(255, 255, 255, 0);
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-family: Arial, Helvetica, sans-serif;
-    color:rgb(0, 204, 255);
+    color:rgb(0, 0, 0);
     position: relative;
     text-justify: center;
     text-align: center;
@@ -30,14 +30,14 @@ img.rounded-corners {
 a.button3{
     display:inline-block;
     padding:0.35em 1.2em;
-    border:0.1em solid #FFFFFF;
+    border:0.1em solid #000000;
     margin:0 0.3em 0.3em 0;
     border-radius:0.12em;
     box-sizing: border-box;
     text-decoration:none;
     font-family:'Roboto',sans-serif;
     font-weight:300;
-    color:#FFFFFF;
+    color:#000000;
     text-align:center;
     transition: all 0.2s;
     }
@@ -54,8 +54,8 @@ a.button3{
 
 body {
     background-color: rgb(66, 66, 66);
-    color: rgb(48, 48, 48);
-    background-image: url(../BG.gif);
+    color: rgb(190, 190, 190);
+    background-image: url(../bg.gif);
     background-size: cover;
     background-repeat: no-repeat;
     background-repeat:repeat;
@@ -74,7 +74,7 @@ body::-webkit-scrollbar {
 
 
 h1 {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     position: relative;
     text-align: center;
     text-justify: center;
@@ -85,7 +85,7 @@ h1 {
 }
 
 h1Second {
-  color:rgb(0, 204, 255);
+  color:rgb(0, 0, 0);
   position: relative;
   text-align: center;
   text-justify: center;
@@ -100,7 +100,7 @@ h1Second {
   }
 
 h2 {
-    color:rgb(0, 204, 255);
+    color:rgb(0, 0, 0);
     position: relative;
     text-justify: center;
     text-align: center;
@@ -112,7 +112,7 @@ h5{
 }
 
 h3 {
-    color:rgb(0, 204, 255);
+    color:rgb(0, 0, 0);
     position: relative;
     text-justify: center;
     text-align: center;
@@ -121,7 +121,7 @@ h3 {
 }
 
 h4{
-    color:rgb(253, 253, 253);
+    color:rgb(0, 0, 0);
     position: relative;
     text-align: center;
     top: 500px;
@@ -133,7 +133,7 @@ p {
 
     position:relative;
 
-    color:rgb(0, 204, 255);
+    color:rgb(0, 0, 0);
     position: relative;
     text-justify: center;
     text-align: center;
@@ -159,7 +159,7 @@ video {
 }
 
 li {
-    color: cornsilk;
+    color: rgb(39, 39, 39);
 }
 
 p2{
@@ -167,7 +167,7 @@ p2{
 
     position:relative;
     top: 200px;
-    color:rgb(0, 204, 255);
+    color:rgb(0, 0, 0);
     position: relative;
     text-justify: center;
     text-align: center;
@@ -179,9 +179,9 @@ p2{
 
 p3{
     background-color: rgba(255, 255, 255, 0);
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-family: Arial, Helvetica, sans-serif;
-    color:rgb(0, 204, 255);
+    color:rgb(0, 0, 0);
     position: relative;
     text-justify: center;
     text-align: center;
@@ -197,20 +197,20 @@ p3{
 .dropbtn {
     display:inline-block;
     padding:0.35em 1.2em;
-    border:0.1em solid #FFFFFF;
+    border:0.1em solid #000000;
     margin:0 0.3em 0.3em 0;
     border-radius:0.12em;
     box-sizing: border-box;
     text-decoration:none;
     font-family:'Roboto',sans-serif;
     font-weight:300;
-    color:#FFFFFF;
+    color:#000000;
     text-align:center;
     transition: all 0.2s;
     }
     a.dropbtn:hover{
-        color:#000000;
-        background-color:#FFFFFF;
+        color:#ffffff00;
+        background-color:#474747;
     }
     @media all and (max-width:30em){
     a.dropbtn{
@@ -227,7 +227,7 @@ p3{
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #ffffff;
+    background-color: #00000000;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -235,7 +235,7 @@ p3{
   
 
   .dropdown-content a {
-    color: black;
+    color: rgb(0, 0, 0);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -248,7 +248,7 @@ p3{
   .dropdown:hover .dropdown-content {display: block;}
   
 
-  .dropdown:hover .dropbtn {background-color: #ffffff;}
+  .dropdown:hover .dropbtn {background-color: #91919100;}
 
   /* Container needed to position the button. Adjust the width as needed */
 .container {
@@ -271,7 +271,7 @@ p3{
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     background-color: #555;
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 16px;
     padding: 12px 24px;
     border: none;
