@@ -55,7 +55,7 @@ a.button3{
 body {
     background-color: rgb(0, 10, 33);
     color: rgb(190, 190, 190);
-    background-image: url(Pictures/E-1246204-53BFDC6C-transformed.jpg);
+    background-image: url(Pictures/meee.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-repeat:repeat;
@@ -74,18 +74,16 @@ body::-webkit-scrollbar {
 
 
 h1 {
-    color: rgb(0, 0, 0);
+    color: rgb(219, 219, 219);
     position: relative;
-    text-align: center;
     text-justify: center;
-    text-align: center;
-    text-align: center;
-    top: 160px;
-    display: inline-block
+    top: 250px;
+    display: inline-block;
+    margin-left: 10%;
 }
 
 h1Second {
-  color:rgb(0, 0, 0);
+  color: rgb(219, 219, 219);
   position: relative;
   text-align: center;
   text-justify: center;
@@ -100,18 +98,18 @@ h1Second {
   }
 
 h2 {
-    color:rgb(0, 0, 0);
+    color:rgb(189, 189, 189);
     position: relative;
     text-justify: center;
     top: 160px;
 }
 
 h5{
-    border: 5px solid #ffffff;
+    border: 5px solid #cfcfcf;
 }
 
 h3 {
-    color:rgb(0, 0, 0);
+    color:rgb(180, 180, 180);
     position: relative;
     text-justify: center;
     text-align: center;
@@ -120,7 +118,7 @@ h3 {
 }
 
 h4{
-    color:rgb(0, 0, 0);
+    color:rgb(196, 196, 196);
     position: relative;
     text-align: center;
     top: 500px;
@@ -132,7 +130,7 @@ p {
 
     position:relative;
 
-    color:rgb(0, 0, 0);
+    color:rgb(206, 206, 206);
     position: relative;
     text-justify: center;
     text-align: center;
