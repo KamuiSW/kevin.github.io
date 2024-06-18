@@ -55,11 +55,11 @@ a.button3{
 body {
     background-color: rgb(0, 10, 33);
     color: rgb(190, 190, 190);
-    background-image: url(Pictures/bg2.jpg);
+    background-image: url(Pictures/Leaf.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment:fixed;
-    overflow:scroll;
+    overflow:hidden;
     font-family: "Roboto", sans-serif;
     align-items: center;
 }
@@ -73,11 +73,7 @@ body::-webkit-scrollbar {
 
 h1 {
     color: rgb(219, 219, 219);
-    position: relative;
-    text-justify: center;
-    top: 250px;
-    display: inline-block;
-    margin-left: 10%;
+    
 }
 
 h1Second {
@@ -107,11 +103,10 @@ h5{
 }
 
 h3 {
-    color:rgb(180, 180, 180);
+    color:rgb(0, 0, 0);
     position: relative;
     text-justify: center;
     text-align: center;
-    top: 160px;
     -webkit-text-stroke: 1px rgb(170, 170, 170); /* width and color */
 }
 
@@ -134,10 +129,6 @@ p {
     text-align: center;
     top: 160px;
     -webkit-text-stroke: 1px rgb(161, 161, 161); /* width and color */
-}
-
-div {
-    text-align: center;
 }
 
 img {
@@ -254,7 +245,7 @@ p3{
   
   /* Make the image responsive */
   .container img {
-    width: 100%;
+    width: 50%;
     height: auto;
   }
   
@@ -291,69 +282,34 @@ p3{
     height: 2100px;
   }
 
-/* Styles for mobile devices */
-@media (max-width: 767px) {
-  /* Adjust the font size for mobile devices */
-  .heading-large {
-      font-size: 200px; /* You can set the desired font size for mobile here */
-  }
 
-  /* Increase button size for mobile */
-  a.button3 {
-      font-size: 20px; /* You can set the desired font size for mobile buttons here */
-      padding: 0.6em 1.4em; /* You can adjust the padding to make the buttons bigger */
-  }
-
-  .dropbtn {
-    font-size: 20px; /* You can set the desired font size for mobile buttons here */
-    padding: 0.6em 1.4em; /* You can adjust the padding to make the buttons bigger */
-    }
-    a.dropbtn:hover{
-        color:#000000;
-        background-color:#FFFFFF;
-    }
-    @media all and (max-width:30em){
-    a.dropbtn{
-        display:block;
-        margin:0.4em auto;
-    }
-  }
-  
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .dropdown-content {
-    font-size: 20px; /* You can set the desired font size for mobile buttons here */
-    padding: 0.6em 1.4em; /* You can adjust the padding to make the buttons bigger */
-  }
-  
-
-  .dropdown-content a {
-    font-size: 20px; /* You can set the desired font size for mobile buttons here */
-    padding: 0.6em 1.4em; /* You can adjust the padding to make the buttons bigger */
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-    width: auto;
-  }
-
-  video {
-    max-width: 100%;
-    height: auto;
-    width: auto;
-  }
-
-  iframe{
-    height: auto;
-    width: auto;
-  }
-
-  p69{
-    width: auto;
-  }
+.container1{
+  width: 100%;
+  height: 100vh;
+  overflow-y:scroll;
+  scroll-snap-type: y mandatory;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
+.container1::-webkit-scrollbar {
+  display: none;
+}
+
+.slides{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  scroll-snap-align: start;
+}
+
+.slides img{
+  width: 350px;
+}
+
+.slides h1{
+  font-size: 100px;
+}
