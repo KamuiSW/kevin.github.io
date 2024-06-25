@@ -52,7 +52,7 @@ a.button3{
     }
 }
 
-body {
+body1 {
     background-color: rgb(0, 10, 33);
     color: rgb(190, 190, 190);
     background-image: url(Pictures/Leaf.jpg);
@@ -62,6 +62,17 @@ body {
     overflow:hidden;
     font-family: "Roboto", sans-serif;
     align-items: center;
+}
+
+body {
+  background-color: rgb(0, 10, 33);
+  color: rgb(190, 190, 190);
+  background-image: url(Pictures/Leaf.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment:fixed;
+  font-family: "Roboto", sans-serif;
+  align-items: center;
 }
     
 body::-webkit-scrollbar {
@@ -73,7 +84,6 @@ body::-webkit-scrollbar {
 
 h1 {
     color: rgb(219, 219, 219);
-    
 }
 
 h1Second {
@@ -92,10 +102,9 @@ h1Second {
   }
 
 h2 {
-    color:rgb(189, 189, 189);
+    color:rgb(255, 255, 255);
     position: relative;
     text-justify: center;
-    top: 160px;
 }
 
 h5{
