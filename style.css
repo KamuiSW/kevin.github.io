@@ -324,3 +324,12 @@ p3{
 .slides h1{
   font-size: 100px;
 }
+
+.boxfortext{
+  padding: 2%;
+  border-style: solid;
+  border-color: #555;
+  background-color: #36363670;
+  border-radius: 30px;
+  border: 5px;
+}
