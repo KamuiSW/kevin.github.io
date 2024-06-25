@@ -73,6 +73,7 @@ body {
   background-attachment:fixed;
   font-family: "Roboto", sans-serif;
   align-items: center;
+  text-decoration: none;
 }
     
 body::-webkit-scrollbar {
@@ -117,6 +118,7 @@ h3 {
     text-justify: center;
     text-align: center;
     -webkit-text-stroke: 1px rgb(170, 170, 170); /* width and color */
+    text-decoration: none;
 }
 
 h4{
