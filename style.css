@@ -116,21 +116,19 @@ h3 {
     position: relative;
     text-justify: center;
     text-align: center;
-    -webkit-text-stroke: 1px rgb(170, 170, 170); /* width and color */
     text-decoration: none;
 }
 
 h4{
-    color:rgb(196, 196, 196);
+    color:rgb(0, 0, 0);
     position: relative;
-    text-align: center;
-    top: 500px;
-    -webkit-text-stroke: 1px rgb(131, 131, 131); /* width and color */
+    text-align: left;
+    top: 0;
 }
 
 p {
     text-align: left;
-    color: #e0e0e0;
+    color: #ffffff;
     line-height: 1.6;
     margin-bottom: 1rem;
 }
@@ -367,7 +365,7 @@ p2, p3 {
 
 .image-grid img {
     width: 100%;
-    height: 300px;
+    height: auto;
     object-fit: cover;
     border-radius: 8px;
 }
@@ -431,7 +429,6 @@ p2, p3 {
     margin-bottom: 1rem;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .project-container {
         padding: 1rem;
