@@ -1,71 +1,90 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-adsense-account" content="ca-pub-6490797898072451">
-    <title>HOME</title>
-    <link rel="icon" type="2825704.gif" href="2825704.gif">
-    <link rel="stylesheet" href="style.css">
+  <title>Kevin | Home</title>
+  <link rel="icon" type="image/gif" href="2825704.gif">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="js/i18n.js" defer></script>
 </head>
-     
 
-<body1>
-    <script src="js/scripts.js"></script>
-    <nav>
-      <ul>
-          <a href="index.html" class="button3">Home</a>
-          <div class="dropdown">
-              <a class="dropbtn">Projecten</a>
-              <div class="dropdown-content">
-                <a href="1ste klas.html">Eerste klas</a>
-                <a href="2ste klas.html">Tweede klas</a>
-                <a href="3ste klas.html">Derde klas</a>
-                <a href="4deklas.html">Vierde Klas</a>
-                <a href="5deklas.html">Vijfde klas</a>
-              </div>
-            </div>
-          <a href="https://kamuistudio.itch.io/" class="button3">Itch.io</a>          
-      </ul>
-  </nav>
-    <div class="container1">
-        <div class="slides">
-
-            <h1>Kevin</h1>
-        </div>
-        <div class="slides">
-          <div class="row">
-            <div class="column">
-              <h2 style="margin-left: 20%;">Ik ben kevin, en ik kom uit China.
-                Ik heb 4 jaar ervaring met Unity en C#<br>
-                Ik ben goed met Beta vakken, maar niet zo goed met talen.<br>
-                Ik speel veel heel veel games. Mijn meest gespeeld games zijn Apex legends en Doom eternal.
-            </h2>
-            </div>
-            <div class="column">
-              <h2>
-                <img src="Pictures/ik.jpg">
-              </h2>
-            </div>
-          </div>
-        </div>
-        <div class="slides">
-          <div class="row">
-            <div class="column">
-              <h3><img src="Pictures/scirpt.png" alt="1" class="rounded-corners" style="width:80%"></h3>
-              <center><h2>Ik programeer in C# en ik maak games in unity.</h2></center>
-            </div>
-            <div class="column">
-              <h3><img src="Pictures/hoi4.jpg" alt="Doom" class="rounded-corners" style="width:80%"></h3>
-              <center><h2>Ik speel veel games zoals HOI4</h2></center>
-            </div>
-            <div class="column">
-              <h3><img src="Pictures/Doggy.jpg" alt="Doggy" class="rounded-corners" style="width:80%"></h3>
-              <center><h2>En dit is mijn hondje!</h2></center>
-            </div>
-          </div>
-        </div>
+<body>
+  <nav class="navbar">
+    <div class="nav-left">
+      <a href="index.html" class="nav-brand">Kevin</a>
     </div>
-        
-    
-</body1>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-btn" data-i18n="nav_home">Home</a></li>
+      <li><a href="index.html#about" class="nav-btn" data-i18n="nav_about">About Me</a></li>
+      <li><a href="PersonalProject.html" class="nav-btn" data-i18n="nav_personal">Personal Project</a></li>
+      <li><a href="UniversityProject.html" class="nav-btn" data-i18n="nav_university">University Project</a></li>
+
+      <li class="dropdown">
+        <a href="#" class="nav-btn dropbtn" data-i18n="nav_highschool">Highschool Projects</a>
+        <div class="dropdown-content">
+          <a href="1ste klas.html" data-i18n="nav_1st_class">Eerste klas</a>
+          <a href="2ste klas.html" data-i18n="nav_2nd_class">Tweede klas</a>
+          <a href="3ste klas.html" data-i18n="nav_3rd_class">Derde klas</a>
+          <a href="4deklas.html" data-i18n="nav_4th_class">Vierde Klas</a>
+          <a href="5deklas.html" data-i18n="nav_5th_class">Vijfde klas</a>
+        </div>
+      </li>
+
+      <li><a href="https://kamuistudio.itch.io/" class="nav-btn" data-i18n="nav_itchio">Itch.io</a></li>
+    </ul>
+
+    <div class="lang-switcher">
+      <button id="lang-nl" title="Nederlands">NL</button>
+      <button id="lang-en" title="English" class="active">EN</button>
+      <button id="lang-zh" title="中文">CN</button>
+    </div>
+  </nav>
+
+  <section class="hero-section">
+    <h1 class="hero-title">Kevin</h1>
+  </section>
+
+  <main class="main-container">
+    <section id="about" class="intro-section glass-panel">
+      <div class="info-row">
+        <div class="content-box">
+          <p class="intro-description" data-i18n="intro_paragraph_1">
+            Ik ben kevin, en ik kom uit China.<br>
+            Ik speel graag games en ik hou van programmeren, robotica en aerospace.<br>
+            Ik speel graag games zoals League of legends, Factorio en Hearts of Iron 4.
+          </p>
+        </div>
+        <div class="image-box">
+          <img src="Pictures/ik.jpg" alt="Kevin" class="profile-pic">
+        </div>
+      </div>
+    </section>
+
+    <section class="hobbies-section">
+      <div class="hobbies-grid">
+        <div class="hobby-card glass-panel">
+          <img src="Pictures/scirpt.png" alt="Scripting">
+          <h2 data-i18n="intro_paragraph_2">Ik programeer in C# en ik maak games in unity.</h2>
+        </div>
+        <div class="hobby-card glass-panel">
+          <img src="Pictures/hoi4.jpg" alt="HOI4">
+          <h2 data-i18n="intro_paragraph_3">Ik speel veel games, zoals HOI4</h2>
+        </div>
+        <div class="hobby-card glass-panel">
+          <img src="Pictures/Doggy.jpg" alt="Doggy">
+          <h2 data-i18n="intro_paragraph_4">En dit is mijn hondje!</h2>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
 
 </html>
