@@ -6,8 +6,68 @@
     <title>Unity WebGL Player | SmallWebDriftGame</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="/js/i18n.js" defer></script>
+    <style>
+      .game-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 20;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 5%;
+        font-family: Inter, Arial, sans-serif;
+        background: rgba(5, 12, 11, 0.9);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+      }
+
+      .game-nav a {
+        color: #f7fbf8;
+        font-weight: 700;
+        text-decoration: none;
+        padding: 8px 12px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.06);
+      }
+
+      .game-nav .spacer {
+        flex: 1;
+      }
+
+      .game-nav button {
+        color: #c8d6d0;
+        font: inherit;
+        font-weight: 800;
+        border: 0;
+        border-radius: 8px;
+        padding: 8px 10px;
+        background: rgba(255, 255, 255, 0.06);
+      }
+
+      .game-nav button.active {
+        color: #04110d;
+        background: #21c48d;
+      }
+
+      #unity-container {
+        top: 58px;
+        height: calc(100% - 58px) !important;
+      }
+    </style>
   </head>
   <body>
+    <nav class="game-nav" aria-label="Main navigation">
+      <a href="/index.html">Kevin Kang</a>
+      <a href="/index.html#projects">Projects</a>
+      <a href="/photography/">Photography</a>
+      <a href="https://kamuistudio.itch.io/">Itch.io</a>
+      <span class="spacer"></span>
+      <button id="lang-nl" type="button">NL</button>
+      <button id="lang-en" type="button" class="active">EN</button>
+      <button id="lang-zh" type="button">CN</button>
+    </nav>
     <div id="unity-container" style="width: 100%; height: 100%;">
       <canvas id="unity-canvas" width=100% height=100%></canvas>
       <div id="unity-loading-bar">
@@ -15,6 +75,10 @@
         <div id="unity-progress-bar-empty">
           <div id="unity-progress-bar-full"></div>
         </div>
+      </div>
+      <div id="unity-warning"></div>
+      <div id="unity-footer">
+        <div id="unity-fullscreen-button"></div>
       </div>
     </div>
     <script>

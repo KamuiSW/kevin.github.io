@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kevin Kang | PWS SolarML</title>
+  <link rel="icon" type="image/jpeg" href="/Pictures/ik.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <script src="/js/i18n.js" defer></script>
+</head>
+
+<body>
+  <nav class="navbar" aria-label="Main navigation">
+    <div class="nav-left"><a href="/index.html" class="nav-brand">Kevin Kang</a></div>
+    <ul class="nav-links">
+      <li><a href="/index.html#projects" class="nav-btn" data-i18n="nav_projects">Projects</a></li>
+      <li><a href="/photography/" class="nav-btn" data-i18n="nav_photography">Photography</a></li>
+      <li><a href="https://kamuistudio.itch.io/" class="nav-btn" data-i18n="nav_itchio">Itch.io</a></li>
+    </ul>
+    <div class="lang-switcher" aria-label="Language">
+      <button id="lang-nl" type="button" title="Nederlands">NL</button>
+      <button id="lang-en" type="button" title="English" class="active">EN</button>
+      <button id="lang-zh" type="button" title="Chinese">CN</button>
+    </div>
+  </nav>
+
+  <main class="project-container">
+    <header class="project-hero">
+      <div>
+        <p class="section-kicker">PWS</p>
+        <h1>SolarML</h1>
+        <p>
+          SolarML is my profile paper research project about using machine learning to make solar-panel cleaning more
+          efficient. The core idea is simple: instead of cleaning every part of a panel the same way, a robot should
+          inspect the surface, detect the dirty areas, and spend extra time only where cleaning is actually needed.
+        </p>
+        <div class="project-meta" aria-label="Project facts">
+          <span>2025-2026</span>
+          <span>Machine learning</span>
+          <span>Raspberry Pi</span>
+          <span>OpenCV</span>
+          <span>Route planning</span>
+        </div>
+        <div class="article-actions">
+          <a class="button3" href="/highschool/pws/PWS-SolarML.pdf" target="_blank" rel="noreferrer">Read full PWS</a>
+          <a class="button3 secondary" href="https://github.com/KamuiSW/MP-SolarBot" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
+      <img src="/highschool/pws/thumbnail.jpg" alt="Solar panel image used for the SolarML PWS">
+    </header>
+
+    <div class="article-layout">
+      <section class="article-section">
+        <h2>The problem</h2>
+        <p>
+          Solar panels lose efficiency when dust, pollen, bird droppings, or other dirt blocks light from reaching the
+          cells. Large solar parks are difficult to maintain because cleaning them by hand costs time, water, money, and
+          physical effort. The PWS research question was: how can machine learning be used to clean solar panels more
+          efficiently?
+        </p>
+        <p>
+          The hypothesis was that a cleaning robot could use camera images to detect dirty areas, estimate how severe the
+          dirt is, and then clean only the parts that need attention. That turns cleaning from a fixed routine into a
+          targeted process.
+        </p>
+      </section>
+
+      <section class="article-section">
+        <h2>How the detection works</h2>
+        <p>
+          The research focused on a Siamese Neural Network because the task is not just classification. The system needs
+          to compare a new image with a clean reference image and decide how different they are. A convolutional network
+          first converts each image into an embedding: a compact vector that represents the important visual features.
+        </p>
+        <p>
+          This is much more efficient than comparing raw pixels. A normal image can contain hundreds of thousands of
+          pixel values, while an embedding can summarize the useful information in a few hundred numbers. That makes it
+          practical to run the detection pipeline on limited hardware such as a Raspberry Pi.
+        </p>
+        <p>
+          The image is split into smaller tiles, each tile is compared against the clean reference, and each area receives
+          a dirt score. In the PWS tests, clear dirt produced high difference scores, while clean panels stayed low. Light
+          dirt and strong reflections were harder, which became one of the main lessons of the project.
+        </p>
+      </section>
+
+      <section class="article-section">
+        <h2>From detection to movement</h2>
+        <p>
+          Detection alone does not clean anything, so the project also explored how the robot should move after it finds
+          dirty spots. Each dirty tile becomes a coordinate. The robot then needs to visit those coordinates without
+          wasting too much movement.
+        </p>
+        <p>
+          Exact Traveling Salesman Problem algorithms were researched, but they are too expensive for a small embedded
+          system. The project chose a greedy nearest-neighbor approach instead. It starts from the robot's current
+          position and repeatedly chooses the closest unvisited dirty spot. This does not always give the perfect route,
+          but it is fast, readable, and realistic for a Raspberry Pi.
+        </p>
+      </section>
+
+      <section class="article-section">
+        <h2>My contribution</h2>
+        <p>
+          My work focused on the robot-side software: mapping the solar panel, generating navigation behavior, planning
+          cleaning paths, and integrating the detection results into robot logic. The PWS became the research foundation
+          for the later Meesterproef, where the same idea developed into the physical SolarBot prototype.
+        </p>
+        <p>
+          The most useful insight from this project was that machine learning only becomes valuable when it is connected
+          to the rest of the system. A model that detects dirt is interesting, but a robot needs coordinates, thresholds,
+          path planning, motor logic, and real-world constraints before that detection can do work.
+        </p>
+      </section>
+
+      <section class="article-section">
+        <h2>Documents</h2>
+        <p>
+          The full project documents are attached below. PDF files can be read directly on the page; the logbook opens as
+          the original spreadsheet file.
+        </p>
+        <div class="document-grid">
+          <a class="document-card" href="/highschool/pws/PWS-SolarML.pdf" target="_blank" rel="noreferrer">
+            <strong>PWS SolarML</strong>
+            <span>Full research report covering the question, theory, method, results, and conclusion.</span>
+            <span class="document-type">PDF</span>
+          </a>
+          <a class="document-card" href="/highschool/pws/PWSVoorstelNew.pdf" target="_blank" rel="noreferrer">
+            <strong>PWS proposal</strong>
+            <span>Initial proposal document for the research direction and project setup.</span>
+            <span class="document-type">PDF</span>
+          </a>
+          <a class="document-card" href="/highschool/pws/LogboekPWS.xlsx" target="_blank" rel="noreferrer">
+            <strong>PWS logbook</strong>
+            <span>Project planning and activity log as a spreadsheet.</span>
+            <span class="document-type">XLSX</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="article-section">
+        <h2>Read the report</h2>
+        <iframe class="pdf-embed" src="/highschool/pws/PWS-SolarML.pdf" title="PWS SolarML PDF"></iframe>
+      </section>
+
+      <section class="article-section">
+        <h2>Read the proposal</h2>
+        <iframe class="pdf-embed" src="/highschool/pws/PWSVoorstelNew.pdf" title="PWS proposal PDF"></iframe>
+      </section>
+    </div>
+  </main>
+</body>
+
+</html>

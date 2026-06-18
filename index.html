@@ -5,83 +5,166 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-adsense-account" content="ca-pub-6490797898072451">
-  <title>Kevin | Home</title>
-  <link rel="icon" type="image/gif" href="2825704.gif">
+  <title>Kevin Kang | Portfolio</title>
+  <link rel="icon" type="image/jpeg" href="/Pictures/ik.jpg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css">
-  <script src="js/i18n.js" defer></script>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/js/i18n.js" defer></script>
 </head>
 
 <body>
-  <nav class="navbar">
-    <div class="nav-left">
-      <a href="index.html" class="nav-brand">Kevin</a>
-    </div>
+  <nav class="navbar" aria-label="Main navigation">
+    <div class="nav-left"><a href="/index.html" class="nav-brand">Kevin Kang</a></div>
     <ul class="nav-links">
-      <li><a href="index.html" class="nav-btn" data-i18n="nav_home">Home</a></li>
-      <li><a href="index.html#about" class="nav-btn" data-i18n="nav_about">About Me</a></li>
-      <li><a href="PersonalProject.html" class="nav-btn" data-i18n="nav_personal">Personal Project</a></li>
-      <li><a href="UniversityProject.html" class="nav-btn" data-i18n="nav_university">University Project</a></li>
-
-      <li class="dropdown">
-        <a href="#" class="nav-btn dropbtn" data-i18n="nav_highschool">Highschool Projects</a>
-        <div class="dropdown-content">
-          <a href="1ste klas.html" data-i18n="nav_1st_class">Eerste klas</a>
-          <a href="2ste klas.html" data-i18n="nav_2nd_class">Tweede klas</a>
-          <a href="3ste klas.html" data-i18n="nav_3rd_class">Derde klas</a>
-          <a href="4deklas.html" data-i18n="nav_4th_class">Vierde Klas</a>
-          <a href="5deklas.html" data-i18n="nav_5th_class">Vijfde klas</a>
-        </div>
-      </li>
-
+      <li><a href="/index.html#projects" class="nav-btn" data-i18n="nav_projects">Projects</a></li>
+      <li><a href="/photography/" class="nav-btn" data-i18n="nav_photography">Photography</a></li>
       <li><a href="https://kamuistudio.itch.io/" class="nav-btn" data-i18n="nav_itchio">Itch.io</a></li>
     </ul>
-
-    <div class="lang-switcher">
-      <button id="lang-nl" title="Nederlands">NL</button>
-      <button id="lang-en" title="English" class="active">EN</button>
-      <button id="lang-zh" title="中文">CN</button>
+    <div class="lang-switcher" aria-label="Language">
+      <button id="lang-nl" type="button" title="Nederlands">NL</button>
+      <button id="lang-en" type="button" title="English" class="active">EN</button>
+      <button id="lang-zh" type="button" title="Chinese">CN</button>
     </div>
   </nav>
 
-  <section class="hero-section">
-    <h1 class="hero-title">Kevin</h1>
-  </section>
+  <main>
+    <section id="introduction" class="portfolio-hero">
+      <div class="hero-copy">
+        <p class="section-kicker" data-i18n="hero_kicker">Portfolio</p>
+        <h1 data-i18n="hero_title">Kevin Kang</h1>
+        <p class="hero-description" data-i18n="hero_description">
+          I build software, games, robotics prototypes, and engineering projects. This portfolio collects my high school,
+          university, personal, and photography work in one place.
+        </p>
+        <div class="hero-actions" aria-label="Portfolio shortcuts">
+          <a href="#projects" class="button3" data-i18n="hero_projects_cta">View projects</a>
+          <a href="/photography/" class="button3 secondary" data-i18n="hero_photos_cta">View photography</a>
+          <a href="https://github.com/KamuiSW" class="button3 secondary" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
 
-  <main class="main-container">
-    <section id="about" class="intro-section glass-panel">
-      <div class="info-row">
-        <div class="content-box">
-          <p class="intro-description" data-i18n="intro_paragraph_1">
-            Ik ben kevin, en ik kom uit China.<br>
-            Ik speel graag games en ik hou van programmeren, robotica en aerospace.<br>
-            Ik speel graag games zoals League of legends, Factorio en Hearts of Iron 4.
-          </p>
-        </div>
-        <div class="image-box">
-          <img src="Pictures/ik.jpg" alt="Kevin" class="profile-pic">
-        </div>
+      <div class="hero-media">
+        <img src="/Pictures/ik.jpg" alt="Kevin Kang" class="profile-pic">
       </div>
     </section>
 
-    <section class="hobbies-section">
-      <div class="hobbies-grid">
-        <div class="hobby-card glass-panel">
-          <img src="Pictures/scirpt.png" alt="Scripting">
-          <h2 data-i18n="intro_paragraph_2">Ik programeer in C# en ik maak games in unity.</h2>
+    <section class="portfolio-section compact-intro" aria-label="Introduction details">
+      <p data-i18n="intro_body">
+        I am from China and currently work on projects around C#, Unity, robotics, engineering design, and physical
+        prototyping. I like projects where code turns into something people can see, test, or use.
+      </p>
+    </section>
+
+    <section id="projects" class="portfolio-section">
+      <div class="section-heading">
+        <p class="section-kicker" data-i18n="projects_kicker">Projects</p>
+        <h2 data-i18n="projects_title">Project archive</h2>
+      </div>
+
+      <div class="project-category-grid">
+        <a class="project-category card-link" href="/highschool/">
+          <img src="/Pictures/blaashal.png" alt="Blaashal project" class="category-image">
+          <span class="category-body">
+            <h3 data-i18n="highschool_title">High school projects</h3>
+            <p data-i18n="highschool_body">
+              Technasium client projects, product concepts, prototypes, and research reports sorted by class year.
+            </p>
+          </span>
+        </a>
+
+        <a class="project-category card-link" href="/university/">
+          <span class="category-placeholder">Upcoming</span>
+          <span class="category-body">
+            <h3 data-i18n="university_title">University projects</h3>
+            <p data-i18n="university_body">
+              University assignments, engineering work, and larger technical projects as they develop.
+            </p>
+          </span>
+        </a>
+
+        <a class="project-category card-link" href="/personal/">
+          <img src="/Pictures/scirpt.png" alt="Code and Unity development" class="category-image">
+          <span class="category-body">
+            <h3 data-i18n="personal_title">Personal projects</h3>
+            <p data-i18n="personal_body">
+              Independent work including Unity development, GitHub projects, experiments, and games.
+            </p>
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <section class="portfolio-section">
+      <div class="section-heading">
+        <p class="section-kicker">Featured</p>
+        <h2>Featured projects</h2>
+      </div>
+
+      <div class="project-category-grid featured-grid">
+        <a class="project-category card-link" href="/highschool/pws/">
+          <img src="/highschool/pws/thumbnail.jpg" alt="Solar panel close-up for PWS SolarML" class="category-image">
+          <span class="category-body">
+            <h3>PWS - SolarML</h3>
+            <p>Research into using machine learning to detect dirty solar panels and plan efficient cleaning routes.</p>
+          </span>
+        </a>
+
+        <a class="project-category card-link" href="/highschool/meesterproef/">
+          <img src="/highschool/meesterproef/thumbnail.jpg" alt="SolarBot Meesterproef thumbnail" class="category-image">
+          <span class="category-body">
+            <h3>Meesterproef - SolarBot</h3>
+            <p>An autonomous solar-panel cleaning robot combining simulation, PCB design, field research, and ML.</p>
+          </span>
+        </a>
+
+        <a class="project-category card-link" href="/personal/jci/">
+          <span class="category-placeholder">JCI</span>
+          <span class="category-body">
+            <h3>JCI</h3>
+            <p>Jofuku Cybernetics International, a Unity game project placeholder.</p>
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <section id="photography" class="portfolio-section">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker" data-i18n="photography_kicker">Photography</p>
+          <h2 data-i18n="photography_title">Selected photos</h2>
         </div>
-        <div class="hobby-card glass-panel">
-          <img src="Pictures/hoi4.jpg" alt="HOI4">
-          <h2 data-i18n="intro_paragraph_3">Ik speel veel games, zoals HOI4</h2>
-        </div>
-        <div class="hobby-card glass-panel">
-          <img src="Pictures/Doggy.jpg" alt="Doggy">
-          <h2 data-i18n="intro_paragraph_4">En dit is mijn hondje!</h2>
-        </div>
+        <a href="/photography/" class="button3">Open gallery</a>
+      </div>
+
+      <div class="photo-grid">
+        <a class="photo-card" href="/photography/DSC01635.jpg" target="_blank" rel="noreferrer">
+          <figure>
+            <img src="/photography/thumbs/DSC01635.jpg" alt="Photography sample DSC01635">
+            <figcaption>DSC01635</figcaption>
+          </figure>
+        </a>
+        <a class="photo-card" href="/photography/FerLog.jpg" target="_blank" rel="noreferrer">
+          <figure>
+            <img src="/photography/thumbs/FerLog.jpg" alt="Photography sample FerLog">
+            <figcaption>FerLog</figcaption>
+          </figure>
+        </a>
+        <a class="photo-card" href="/photography/YellowCar.jpg" target="_blank" rel="noreferrer">
+          <figure>
+            <img src="/photography/thumbs/YellowCar.jpg" alt="Photography sample YellowCar">
+            <figcaption>YellowCar</figcaption>
+          </figure>
+        </a>
+        <a class="photo-card" href="/photography/NeoZEON.jpg" target="_blank" rel="noreferrer">
+          <figure>
+            <img src="/photography/thumbs/NeoZEON.jpg" alt="Photography sample NeoZEON">
+            <figcaption>NeoZEON</figcaption>
+          </figure>
+        </a>
       </div>
     </section>
   </main>

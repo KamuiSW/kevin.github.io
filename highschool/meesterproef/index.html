@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kevin Kang | Meesterproef SolarBot</title>
+  <link rel="icon" type="image/jpeg" href="/Pictures/ik.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <script src="/js/i18n.js" defer></script>
+</head>
+
+<body>
+  <nav class="navbar" aria-label="Main navigation">
+    <div class="nav-left"><a href="/index.html" class="nav-brand">Kevin Kang</a></div>
+    <ul class="nav-links">
+      <li><a href="/index.html#projects" class="nav-btn" data-i18n="nav_projects">Projects</a></li>
+      <li><a href="/photography/" class="nav-btn" data-i18n="nav_photography">Photography</a></li>
+      <li><a href="https://kamuistudio.itch.io/" class="nav-btn" data-i18n="nav_itchio">Itch.io</a></li>
+    </ul>
+    <div class="lang-switcher" aria-label="Language">
+      <button id="lang-nl" type="button" title="Nederlands">NL</button>
+      <button id="lang-en" type="button" title="English" class="active">EN</button>
+      <button id="lang-zh" type="button" title="Chinese">CN</button>
+    </div>
+  </nav>
+
+  <main class="project-container">
+    <header class="project-hero">
+      <div>
+        <p class="section-kicker">Meesterproef</p>
+        <h1>SolarBot</h1>
+        <p>
+          SolarBot is the final Technasium project: an autonomous solar-panel cleaning robot for Concord New Energy. It
+          combines machine learning, Raspberry Pi software, navigation simulation, custom PCB design, 3D printed
+          mechanics, and field research into one proof-of-concept system.
+        </p>
+        <div class="project-meta" aria-label="Project facts">
+          <span>2025-2026</span>
+          <span>Team project</span>
+          <span>Raspberry Pi 5</span>
+          <span>TensorFlow Lite</span>
+          <span>PCB design</span>
+          <span>3D printing</span>
+        </div>
+        <div class="article-actions">
+          <a class="button3" href="/highschool/meesterproef/Meesterproef%20Eindverslag%20SolarBot.pdf" target="_blank" rel="noreferrer">Read final report</a>
+          <a class="button3 secondary" href="https://github.com/KamuiSW/MP-SolarBot" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
+      <img src="/highschool/meesterproef/thumbnail.jpg" alt="SolarBot Meesterproef thumbnail">
+    </header>
+
+    <div class="article-layout">
+      <section class="article-section">
+        <h2>Why this project exists</h2>
+        <p>
+          Solar panels are part of the energy transition, but they lose output when dust, pollen, sand, and bird
+          droppings block light. In large solar parks, maintenance is expensive and repetitive. Some parks are cleaned
+          manually with brushes and osmose water backpacks; others use tractors or larger cleaning systems, but those
+          methods do not fit every site.
+        </p>
+        <p>
+          The assignment was to design a robot that can work without rails, move safely on sloped PV surfaces, detect
+          panel edges, clean hard dirt without damaging the glass, and need as little human control as possible after
+          startup. The team set a performance target around restoring at least 80 percent of the lost yield from dirt and
+          keeping the robot light enough for panel structures.
+        </p>
+      </section>
+
+      <section class="article-section">
+        <h2>Field research</h2>
+        <p>
+          The field visit grounded the design in real conditions. The site used Astro Energy 570W panels, had uneven and
+          wet ground, and was cleaned about every six months by people walking between rows with brushes and 10-liter
+          osmose water backpacks. The field notes also showed that dirt remaining after rain gathers near the lower edge
+          of panels, while bird droppings stay attached until cleaned directly.
+        </p>
+        <div class="inline-gallery">
+          <a href="/highschool/meesterproef/veldonderzoek/IMG_20251028_104319_981.jpg" target="_blank" rel="noreferrer">
+            <figure>
+              <img src="/highschool/meesterproef/thumbs/IMG_20251028_104319_981.jpg" alt="Solar park field research photo">
+              <figcaption>Solar park layout</figcaption>
+            </figure>
+          </a>
+          <a href="/highschool/meesterproef/veldonderzoek/IMG_20251028_105205_290.jpg" target="_blank" rel="noreferrer">
+            <figure>
+              <img src="/highschool/meesterproef/thumbs/IMG_20251028_105205_290.jpg" alt="Solar panel dirt after rain">
+              <figcaption>Dirt after rain</figcaption>
+            </figure>
+          </a>
+          <a href="/highschool/meesterproef/veldonderzoek/IMG_20251028_105624_883.jpg" target="_blank" rel="noreferrer">
+            <figure>
+              <img src="/highschool/meesterproef/thumbs/IMG_20251028_105624_883.jpg" alt="Solar panel detail from field research">
+              <figcaption>Panel detail</figcaption>
+            </figure>
+          </a>
+        </div>
+      </section>
+
+      <section class="article-section">
+        <h2>Software and machine learning</h2>
+        <p>
+          The AI part makes SolarBot more than a normal cleaning robot. The system uses a CNN and Siamese-network style
+          approach to compare a camera image with a clean reference image. Instead of comparing every pixel, the model
+          turns an image into an embedding and compares those compact representations. The distance from the clean
+          reference becomes a dirt score.
+        </p>
+        <p>
+          The report describes tile-based analysis so the robot can tell where dirt is, not just that a panel is dirty.
+          A Raspberry Pi loads the trained model for inference, stores dirty coordinates, and feeds those points into the
+          cleaning logic. The planned route uses a nearest-neighbor approach so the robot can return to the closest dirty
+          area next without calculating every possible route.
+        </p>
+        <div class="inline-gallery">
+          <figure>
+            <img src="/highschool/meesterproef/simulationJsonFile.png" alt="Simulation JSON output for SolarBot">
+            <figcaption>Simulation data output</figcaption>
+          </figure>
+          <a href="/highschool/meesterproef/PCBPhoto/Screenshot%202026-01-14%20122258.png" target="_blank" rel="noreferrer">
+            <figure>
+              <img src="/highschool/meesterproef/PCBPhoto/Screenshot%202026-01-14%20122258.png" alt="Early SolarBot PCB design screenshot">
+              <figcaption>Early PCB/schematic work</figcaption>
+            </figure>
+          </a>
+        </div>
+      </section>
+
+      <section class="article-section">
+        <h2>Simulation before hardware</h2>
+        <p>
+          I first tested the navigation in simulation because mistakes in robot code can damage real hardware. The first
+          version was a C++ simulation for coordinate math and spiral navigation. The second version used Unity to model
+          movement, edge sensors, and the process of finding panel corners. The final simulation brought the ML model
+          into the loop: dirty spots, planned paths, real paths, and nearest-neighbor route decisions could all be tested
+          before running on the physical robot.
+        </p>
+        <p>
+          This became one of the main technical lessons of the project. A model is only useful when it is integrated into
+          a system that can interpret its output, make movement decisions, and keep functioning under real constraints.
+        </p>
+      </section>
+
+      <section class="article-section">
+        <h2>PCB and robot build</h2>
+        <p>
+          The custom PCB started as a way to clean up unstable wiring between the Raspberry Pi, motor drivers, servos,
+          and power supply. The first board was compact, but the integrated buck converter and long thin traces created
+          reliability problems. After expert feedback, the design shifted toward wider power routing, separated signal
+          and power areas, power planes, and an external buck converter module.
+        </p>
+        <p>
+          The mechanical side was also iterative. The robot uses tracked movement so it can turn with two stepper motors.
+          The first track design had problems with the belt climbing over the wheel sidewalls. The revised design took
+          inspiration from tank tracks, using extra wheels to keep the band tensioned and pressed against the surface.
+          The cleaning mechanism uses a brush and an osmose-water tank, with the final prototype built around a Raspberry
+          Pi 5, drivers, two stepper motors, a battery, the PCB, and a 3D printed body.
+        </p>
+        <div class="inline-gallery">
+          <a href="/highschool/meesterproef/PCBPhysical.jpg" target="_blank" rel="noreferrer">
+            <figure>
+              <img src="/highschool/meesterproef/thumbs/PCBPhysical.jpg" alt="Physical SolarBot PCB">
+              <figcaption>Physical PCB</figcaption>
+            </figure>
+          </a>
+          <a href="/highschool/meesterproef/PCBPhoto/Screenshot%202026-01-24%20204951.png" target="_blank" rel="noreferrer">
+            <figure>
+              <img src="/highschool/meesterproef/PCBPhoto/Screenshot%202026-01-24%20204951.png" alt="PCB layout screenshot">
+              <figcaption>PCB routing</figcaption>
+            </figure>
+          </a>
+          <a href="/highschool/meesterproef/PCBPhoto/Screenshot%202026-01-24%20221506.png" target="_blank" rel="noreferrer">
+            <figure>
+              <img src="/highschool/meesterproef/PCBPhoto/Screenshot%202026-01-24%20221506.png" alt="Final PCB design screenshot">
+              <figcaption>Final board view</figcaption>
+            </figure>
+          </a>
+        </div>
+      </section>
+
+      <section class="article-section">
+        <h2>Reflection</h2>
+        <p>
+          My personal goal was to learn how machine learning can be combined with mechanical engineering. By the end, I
+          had moved from understanding a model in isolation to seeing what is required to make it useful in a robot:
+          loading the model, processing camera data, interpreting confidence scores, planning paths, handling latency,
+          and dealing with embedded hardware limitations.
+        </p>
+        <p>
+          The PCB work changed my view of engineering as well. A schematic can be logically correct and still fail in
+          practice because of voltage drop, electromagnetic interference, trace width, or power distribution. SolarBot
+          was not just an AI project. It was a systems project where software, electronics, physical design, and planning
+          all had to meet.
+        </p>
+      </section>
+
+      <section class="article-section">
+        <h2>Documents</h2>
+        <p>
+          The project documents are attached here. PDF files can be read directly on the page; DOCX and PPTX files open
+          as original source documents.
+        </p>
+        <div class="document-grid">
+          <a class="document-card" href="/highschool/meesterproef/Meesterproef%20Eindverslag%20SolarBot.pdf" target="_blank" rel="noreferrer">
+            <strong>Final SolarBot report</strong>
+            <span>Full project report covering research, concept, software, PCB, robot build, simulation, and conclusion.</span>
+            <span class="document-type">PDF</span>
+          </a>
+          <a class="document-card" href="/highschool/meesterproef/EindReflectieSolarBotKevinKang.pdf" target="_blank" rel="noreferrer">
+            <strong>Final reflection</strong>
+            <span>Personal and team reflection on planning, ML integration, PCB design, and project growth.</span>
+            <span class="document-type">PDF</span>
+          </a>
+          <a class="document-card" href="/highschool/meesterproef/Calculations.pdf" target="_blank" rel="noreferrer">
+            <strong>Calculations</strong>
+            <span>Supporting calculations used in the robot and electronics design.</span>
+            <span class="document-type">PDF</span>
+          </a>
+          <a class="document-card" href="/highschool/meesterproef/Presentation.pptx" target="_blank" rel="noreferrer">
+            <strong>Presentation</strong>
+            <span>Project presentation deck.</span>
+            <span class="document-type">PPTX</span>
+          </a>
+          <a class="document-card" href="/highschool/meesterproef/Simulation.docx" target="_blank" rel="noreferrer">
+            <strong>Simulation notes</strong>
+            <span>Simulation document for mapping, movement, and testing before real hardware.</span>
+            <span class="document-type">DOCX</span>
+          </a>
+          <a class="document-card" href="/highschool/meesterproef/PCBDesign.docx" target="_blank" rel="noreferrer">
+            <strong>PCB design notes</strong>
+            <span>Design process and iteration notes for the SolarBot board.</span>
+            <span class="document-type">DOCX</span>
+          </a>
+          <a class="document-card" href="/highschool/meesterproef/veldonderzoek/Veldonderzoek%20Document.docx" target="_blank" rel="noreferrer">
+            <strong>Field research</strong>
+            <span>Collected observations from the solar park visit.</span>
+            <span class="document-type">DOCX</span>
+          </a>
+          <a class="document-card" href="/highschool/meesterproef/POPMeesterproef.docx" target="_blank" rel="noreferrer">
+            <strong>POP document</strong>
+            <span>Personal development planning for the Meesterproef.</span>
+            <span class="document-type">DOCX</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="article-section">
+        <h2>Read the final report</h2>
+        <iframe class="pdf-embed" src="/highschool/meesterproef/Meesterproef%20Eindverslag%20SolarBot.pdf" title="Meesterproef SolarBot final report"></iframe>
+      </section>
+
+      <section class="article-section">
+        <h2>Read the reflection</h2>
+        <iframe class="pdf-embed" src="/highschool/meesterproef/EindReflectieSolarBotKevinKang.pdf" title="SolarBot reflection PDF"></iframe>
+      </section>
+    </div>
+  </main>
+</body>
+
+</html>

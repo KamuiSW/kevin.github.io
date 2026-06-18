@@ -1,6 +1,7 @@
-import os, re, glob
+import glob
+import re
 
-html_files = glob.glob('*.html') + glob.glob('Projecten/*.html')
+html_files = glob.glob('**/*.html', recursive=True)
 css_files = glob.glob('*.css')
 js_files = glob.glob('js/*.js')
 

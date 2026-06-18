@@ -1,191 +1,100 @@
 const translations = {
-  nl: {
-    nav_home: "Home",
-    nav_about: "Over mij",
-    nav_personal: "Personal Project",
-    nav_university: "University Project",
-    nav_highschool: "Highschool Projects",
-    nav_1st_class: "Eerste klas",
-    nav_2nd_class: "Tweede klas",
-    nav_3rd_class: "Derde klas",
-    nav_4th_class: "Vierde klas",
-    nav_5th_class: "Vijfde klas",
-    nav_itchio: "Itch.io",
-    intro_paragraph_1: "Ik ben kevin, en ik kom uit China.<br>Ik speel graag games en ik hou van programmeren, robotica en aerospace.<br>Ik speel graag games zoals League of legends, Factorio en Hearts of Iron 4.",
-    intro_paragraph_2: "Ik programeer in C# en ik maak games in unity.",
-    intro_paragraph_3: "Ik speel veel games, zoals HOI4",
-    intro_paragraph_4: "En dit is mijn hondje!",
-    page_title_1st: "Eerste Klas Projecten",
-    page_title_2nd: "Tweede Klas Projecten",
-    page_title_3rd: "Derde Klas Projecten",
-    page_title_4th: "Vierde Klas Projecten",
-    page_title_5th: "Vijfde Klas Projecten",
-    btn_read_more: "Lees meer",
-    proj_flori: "Flori Project",
-    proj_cobra: "Cobra Project",
-    proj_tjbot: "TJbot Project",
-    proj_viruskenner: "VirusKenner Project",
-    proj_ema: "EMA Project",
-    proj_voedselbos: "VoedselBos Project",
-    proj_tino: "Tino Project",
-    proj_kpn: "KPN Project",
-    proj_blaashal: "Blaashal Project",
-    proj_keuze: "Keuze Project",
-    proj_premiumgolf: "Project PremiumGolf",
-    proj_mochi: "Project Mochi",
-    stat_league: "League of Legends",
-    stat_rank: "Rank",
-    stat_main: "Main",
-    stat_steam: "Steam",
-    stat_level: "Level",
-    stat_games: "Games",
-    lbl_coming_soon: "Binnenkort beschikbaar",
-    lbl_travel_photos: "Reisfoto's",
-    lbl_physical_projects: "Fysieke Projecten (Robots & Pi)",
-    lbl_github_stats: "GitHub Statistiek"
-  },
   en: {
-    nav_home: "Home",
-    nav_about: "About Me",
-    nav_personal: "Personal Project",
-    nav_university: "University Project",
-    nav_highschool: "Highschool Projects",
-    nav_1st_class: "First Class",
-    nav_2nd_class: "Second Class",
-    nav_3rd_class: "Third Class",
-    nav_4th_class: "Fourth Class",
-    nav_5th_class: "Fifth Class",
+    nav_projects: "Projects",
+    nav_photography: "Photography",
     nav_itchio: "Itch.io",
-    intro_paragraph_1: "I am Kevin, and I come from China.<br>I love playing games and I like programming, robotics, and aerospace.<br>I like to play games such as League of Legends, Factorio, and Hearts of Iron 4.",
-    intro_paragraph_2: "I program in C# and make games in Unity.",
-    intro_paragraph_3: "I play a lot of games, such as HOI4.",
-    intro_paragraph_4: "And this is my dog!",
-    page_title_1st: "First Class Projects",
-    page_title_2nd: "Second Class Projects",
-    page_title_3rd: "Third Class Projects",
-    page_title_4th: "Fourth Class Projects",
-    page_title_5th: "Fifth Class Projects",
-    btn_read_more: "Read more",
-    proj_flori: "Flori Project",
-    proj_cobra: "Cobra Project",
-    proj_tjbot: "TJbot Project",
-    proj_viruskenner: "VirusKenner Project",
-    proj_ema: "EMA Project",
-    proj_voedselbos: "VoedselBos Project",
-    proj_tino: "Tino Project",
-    proj_kpn: "KPN Project",
-    proj_blaashal: "Blaashal Project",
-    proj_keuze: "Choice Project",
-    proj_premiumgolf: "Project PremiumGolf",
-    proj_mochi: "Project Mochi",
-    stat_league: "League of Legends",
-    stat_rank: "Rank",
-    stat_main: "Main",
-    stat_steam: "Steam",
-    stat_level: "Level",
-    stat_games: "Games",
-    lbl_coming_soon: "Coming Soon",
-    lbl_travel_photos: "Travel Photos",
-    lbl_physical_projects: "Physical Projects (Robots & Pi)",
-    lbl_github_stats: "GitHub Stats"
+    hero_kicker: "Portfolio",
+    hero_title: "Kevin Kang",
+    hero_description: "I build software, games, robotics prototypes, and engineering projects. This portfolio collects my high school, university, personal, and photography work in one place.",
+    hero_projects_cta: "View projects",
+    hero_photos_cta: "View photography",
+    intro_body: "I am from China and currently work on projects around C#, Unity, robotics, engineering design, and physical prototyping. I like projects where code turns into something people can see, test, or use.",
+    projects_kicker: "Projects",
+    projects_title: "Project archive",
+    highschool_title: "High school projects",
+    highschool_body: "Technasium client projects, product concepts, prototypes, and research reports sorted by class year.",
+    university_title: "University projects",
+    university_body: "University assignments, engineering work, and larger technical projects as they develop.",
+    personal_title: "Personal projects",
+    personal_body: "Independent work including Unity development, GitHub projects, experiments, and games.",
+    photography_kicker: "Photography",
+    photography_title: "Selected photos"
+  },
+  nl: {
+    nav_projects: "Projecten",
+    nav_photography: "Fotografie",
+    nav_itchio: "Itch.io",
+    hero_kicker: "Portfolio",
+    hero_title: "Kevin Kang",
+    hero_description: "Ik bouw software, games, robotica-prototypes en technische projecten. Dit portfolio brengt mijn middelbare school-, universiteits-, persoonlijke en fotografieprojecten samen.",
+    hero_projects_cta: "Bekijk projecten",
+    hero_photos_cta: "Bekijk fotografie",
+    intro_body: "Ik kom uit China en werk aan projecten rond C#, Unity, robotica, technisch ontwerp en fysieke prototypes. Ik houd van projecten waarin code verandert in iets dat mensen kunnen zien, testen of gebruiken.",
+    projects_kicker: "Projecten",
+    projects_title: "Projectarchief",
+    highschool_title: "Middelbare schoolprojecten",
+    highschool_body: "Technasium klantprojecten, productconcepten, prototypes en onderzoeksverslagen per klas.",
+    university_title: "Universiteitsprojecten",
+    university_body: "Universiteitsopdrachten, technisch werk en grotere technische projecten terwijl ze zich ontwikkelen.",
+    personal_title: "Persoonlijke projecten",
+    personal_body: "Eigen werk met Unity, GitHub-projecten, experimenten en games.",
+    photography_kicker: "Fotografie",
+    photography_title: "Geselecteerde foto's"
   },
   zh: {
-    nav_home: "主页",
-    nav_about: "关于我",
-    nav_personal: "个人项目",
-    nav_university: "大学项目",
-    nav_highschool: "高中项目",
-    nav_1st_class: "一年级",
-    nav_2nd_class: "二年级",
-    nav_3rd_class: "三年级",
-    nav_4th_class: "四年级",
-    nav_5th_class: "五年级",
+    nav_projects: "项目",
+    nav_photography: "摄影",
     nav_itchio: "Itch.io",
-    intro_paragraph_1: "我是Kevin，来自中国。<br>我喜欢玩游戏，并且热爱编程、机器人技术和航空航天。<br>我经常玩《英雄联盟》、《异星工厂》和《钢铁雄心4》等游戏。",
-    intro_paragraph_2: "我用C#编程，并用Unity制作游戏。",
-    intro_paragraph_3: "我玩很多游戏，比如HOI4。",
-    intro_paragraph_4: "这是我的狗狗！",
-    page_title_1st: "一年级项目",
-    page_title_2nd: "二年级项目",
-    page_title_3rd: "三年级项目",
-    page_title_4th: "四年级项目",
-    page_title_5th: "五年级项目",
-    btn_read_more: "阅读更多",
-    proj_flori: "Flori 项目",
-    proj_cobra: "Cobra 项目",
-    proj_tjbot: "TJbot 项目",
-    proj_viruskenner: "VirusKenner 项目",
-    proj_ema: "EMA 项目",
-    proj_voedselbos: "VoedselBos 项目",
-    proj_tino: "Tino 项目",
-    proj_kpn: "KPN 项目",
-    proj_blaashal: "Blaashal 项目",
-    proj_keuze: "选择项目",
-    proj_premiumgolf: "PremiumGolf 项目",
-    proj_mochi: "麻薯项目",
-    stat_league: "英雄联盟",
-    stat_rank: "段位",
-    stat_main: "位置",
-    stat_steam: "Steam",
-    stat_level: "等级",
-    stat_games: "游戏数量",
-    lbl_coming_soon: "敬请期待",
-    lbl_travel_photos: "旅行照片",
-    lbl_physical_projects: "物理项目 (机器人和树莓派)",
-    lbl_github_stats: "GitHub 统计"
+    hero_kicker: "作品集",
+    hero_title: "Kevin Kang",
+    hero_description: "我制作软件、游戏、机器人原型和工程项目。这个作品集汇总了我的高中、大学、个人和摄影作品。",
+    hero_projects_cta: "查看项目",
+    hero_photos_cta: "查看摄影",
+    intro_body: "我来自中国，目前专注于 C#、Unity、机器人、工程设计和实体原型项目。我喜欢让代码变成人们可以看到、测试或使用的东西。",
+    projects_kicker: "项目",
+    projects_title: "项目档案",
+    highschool_title: "高中项目",
+    highschool_body: "按班级整理的 Technasium 客户项目、产品概念、原型和研究报告。",
+    university_title: "大学项目",
+    university_body: "大学作业、工程工作和正在发展的更大型技术项目。",
+    personal_title: "个人项目",
+    personal_body: "包含 Unity 开发、GitHub 项目、实验和游戏的独立作品。",
+    photography_kicker: "摄影",
+    photography_title: "精选照片"
   }
 };
 
 function setLanguage(lang) {
+  const selected = translations[lang] ? lang : "en";
+
   try {
-    localStorage.setItem('lang', lang);
-  } catch (e) {
+    localStorage.setItem("lang", selected);
+  } catch (error) {
     console.warn("Could not save language preference to localStorage.");
   }
-  document.documentElement.lang = lang;
 
-  // Replace text using data-i18n tags
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    if (translations[lang] && translations[lang][key]) {
-      el.innerHTML = translations[lang][key];
+  document.documentElement.lang = selected;
+
+  document.querySelectorAll("[data-i18n]").forEach((element) => {
+    const key = element.getAttribute("data-i18n");
+    const translation = translations[selected][key];
+
+    if (translation) {
+      element.innerHTML = translation;
     }
   });
 
-  // Update active state of buttons
-  document.querySelectorAll('.lang-switcher button').forEach(btn => {
-    btn.classList.remove('active');
+  document.querySelectorAll(".lang-switcher button, .game-nav button").forEach((button) => {
+    button.classList.toggle("active", button.id === `lang-${selected}`);
   });
-  const activeBtn = document.getElementById(`lang-${lang}`);
-  if (activeBtn) activeBtn.classList.add('active');
 }
 
-// Ensure the code runs unconditionally when DOM is ready
 document.addEventListener("DOMContentLoaded", () => {
-  let savedLang = 'en'; // default to English permanently on load
+  setLanguage("en");
 
-  setLanguage(savedLang);
-
-  const enBtn = document.getElementById('lang-en');
-  const nlBtn = document.getElementById('lang-nl');
-  const zhBtn = document.getElementById('lang-zh');
-
-  if (enBtn) {
-    enBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      setLanguage('en');
+  document.querySelectorAll("button[id^='lang-']").forEach((button) => {
+    button.addEventListener("click", () => {
+      setLanguage(button.id.replace("lang-", ""));
     });
-  }
-  if (nlBtn) {
-    nlBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      setLanguage('nl');
-    });
-  }
-  if (zhBtn) {
-    zhBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      setLanguage('zh');
-    });
-  }
+  });
 });
