@@ -34,18 +34,9 @@
         <p class="section-kicker">Meesterproef</p>
         <h1>SolarBot</h1>
         <p>
-          SolarBot is the final Technasium project: an autonomous solar-panel cleaning robot for Concord New Energy. It
-          combines machine learning, Raspberry Pi software, navigation simulation, custom PCB design, 3D printed
-          mechanics, and field research into one proof-of-concept system.
+          SolarBot is the final Technasium project. An autonomous solarpanel cleaning robot for Concord New Energy. We used machine learning, raspberry pi, navigation simulation, custom PCB design, 3D printed
+          mechanics, and field research into one proof of concept system.
         </p>
-        <div class="project-meta" aria-label="Project facts">
-          <span>2025-2026</span>
-          <span>Team project</span>
-          <span>Raspberry Pi 5</span>
-          <span>TensorFlow Lite</span>
-          <span>PCB design</span>
-          <span>3D printing</span>
-        </div>
         <div class="article-actions">
           <a class="button3" href="/highschool/meesterproef/Meesterproef%20Eindverslag%20SolarBot.pdf" target="_blank" rel="noreferrer">Read final report</a>
           <a class="button3 secondary" href="https://github.com/KamuiSW/MP-SolarBot" target="_blank" rel="noreferrer">GitHub</a>
@@ -56,7 +47,7 @@
 
     <div class="article-layout">
       <section class="article-section">
-        <h2>Why this project exists</h2>
+        <h2>Why this project exists (note that text below has parts summarized by AI)</h2>
         <p>
           Solar panels are part of the energy transition, but they lose output when dust, pollen, sand, and bird
           droppings block light. In large solar parks, maintenance is expensive and repetitive. Some parks are cleaned
@@ -64,20 +55,15 @@
           methods do not fit every site.
         </p>
         <p>
-          The assignment was to design a robot that can work without rails, move safely on sloped PV surfaces, detect
-          panel edges, clean hard dirt without damaging the glass, and need as little human control as possible after
-          startup. The team set a performance target around restoring at least 80 percent of the lost yield from dirt and
-          keeping the robot light enough for panel structures.
+          The assignment was to design a robot that can work without rails, move safely on sloped PV surfaces, clean hard dirt without damaging the glass, and need as little human control as possible after
+          startup.
         </p>
       </section>
 
       <section class="article-section">
         <h2>Field research</h2>
         <p>
-          The field visit grounded the design in real conditions. The site used Astro Energy 570W panels, had uneven and
-          wet ground, and was cleaned about every six months by people walking between rows with brushes and 10-liter
-          osmose water backpacks. The field notes also showed that dirt remaining after rain gathers near the lower edge
-          of panels, while bird droppings stay attached until cleaned directly.
+          The site used Astro Energy 570W panels, had uneven and wet ground, and was cleaned about every six months by people walking between rows with brushes and 10 liter osmose water backpacks. The field notes also showed that dirt remaining after rain gathers near the lower edge of panels, while bird droppings stay attached until cleaned directly.
         </p>
         <div class="inline-gallery">
           <a href="/highschool/meesterproef/veldonderzoek/IMG_20251028_104319_981.jpg" target="_blank" rel="noreferrer">
@@ -88,8 +74,8 @@
           </a>
           <a href="/highschool/meesterproef/veldonderzoek/IMG_20251028_105205_290.jpg" target="_blank" rel="noreferrer">
             <figure>
-              <img src="/highschool/meesterproef/thumbs/IMG_20251028_105205_290.jpg" alt="Solar panel dirt after rain">
-              <figcaption>Dirt after rain</figcaption>
+              <img src="/highschool/meesterproef/thumbs/IMG_20251028_105205_290.jpg" alt="Solar panel dirt">
+              <figcaption>Dirt</figcaption>
             </figure>
           </a>
           <a href="/highschool/meesterproef/veldonderzoek/IMG_20251028_105624_883.jpg" target="_blank" rel="noreferrer">
@@ -104,15 +90,15 @@
       <section class="article-section">
         <h2>Software and machine learning</h2>
         <p>
-          The AI part makes SolarBot more than a normal cleaning robot. The system uses a CNN and Siamese-network style
-          approach to compare a camera image with a clean reference image. Instead of comparing every pixel, the model
-          turns an image into an embedding and compares those compact representations. The distance from the clean
+          The system uses a Siamese network style
+          approach to compare a camera image with a clean reference image. The model
+          turns an image into an embedding and compares those representations. The distance from the clean
           reference becomes a dirt score.
         </p>
         <p>
-          The report describes tile-based analysis so the robot can tell where dirt is, not just that a panel is dirty.
+          We made a tile based analysis so the robot can tell where dirt is.
           A Raspberry Pi loads the trained model for inference, stores dirty coordinates, and feeds those points into the
-          cleaning logic. The planned route uses a nearest-neighbor approach so the robot can return to the closest dirty
+          cleaning logic. The planned route uses a nearest neighbor approach so the robot can return to the closest dirty
           area next without calculating every possible route.
         </p>
         <div class="inline-gallery">
@@ -132,10 +118,10 @@
       <section class="article-section">
         <h2>Simulation before hardware</h2>
         <p>
-          I first tested the navigation in simulation because mistakes in robot code can damage real hardware. The first
+          We first tested the navigation in simulation because mistakes in robot code can damage real hardware. The first
           version was a C++ simulation for coordinate math and spiral navigation. The second version used Unity to model
           movement, edge sensors, and the process of finding panel corners. The final simulation brought the ML model
-          into the loop: dirty spots, planned paths, real paths, and nearest-neighbor route decisions could all be tested
+          into the system. dirty spots, planned paths, real paths, and nearest neighbor route decisions could all be tested
           before running on the physical robot.
         </p>
         <p>
